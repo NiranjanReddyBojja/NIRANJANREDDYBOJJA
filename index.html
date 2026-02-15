@@ -5,147 +5,195 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Niranjan Reddy Bojja | Data & Systems Architect</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap');
-        body { font-family: 'Outfit', sans-serif; }
-        .hero-mesh { background-color: #0f172a; background-image: radial-gradient(at 0% 0%, hsla(217,100%,13%,1) 0, transparent 50%), radial-gradient(at 50% 0%, hsla(217,91%,21%,1) 0, transparent 50%), radial-gradient(at 100% 0%, hsla(217,91%,21%,1) 0, transparent 50%); }
-        .glass-dark { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .accent-text { background: linear-gradient(90deg, #60a5fa, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .scroll-reveal { transition: all 0.8s ease-out; }
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .hero-bg { background: radial-gradient(circle at top right, #1e293b, #0f172a); }
+        .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); overflow-y: auto; }
+        .modal-content { background: #1e293b; margin: 5% auto; padding: 40px; border-radius: 24px; width: 90%; max-width: 900px; color: #f1f5f9; }
+        .skill-tag { background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); color: #60a5fa; }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-200">
 
     <nav class="fixed w-full z-50 px-6 py-4">
-        <div class="max-w-7xl mx-auto flex justify-between items-center glass-dark rounded-2xl px-8 py-3 shadow-2xl">
-            <span class="text-2xl font-black tracking-tighter uppercase">NRB<span class="text-blue-500">.</span></span>
+        <div class="max-w-7xl mx-auto flex justify-between items-center glass rounded-2xl px-8 py-3 shadow-2xl">
+            <span class="text-2xl font-black tracking-tighter uppercase text-white">NRB<span class="text-blue-500">.</span></span>
             <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-slate-400">
-                <a href="#about" class="hover:text-blue-400 transition">Strategy</a>
-                <a href="#experience" class="hover:text-blue-400 transition">Experience</a>
+                <a href="#about" class="hover:text-blue-400 transition">About</a>
                 <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
+                <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
             </div>
-            <a href="mailto:bojjaniranjanreddy1998@gmail.com" class="bg-blue-600 text-white px-6 py-2 rounded-xl text-sm font-bold hover:bg-blue-500 shadow-[0_0_20px_rgba(37,99,235,0.4)]">Contact</a>
+            <a href="mailto:bojjaniranjanreddy1998@gmail.com" class="bg-blue-600 text-white px-6 py-2 rounded-xl text-sm font-bold hover:bg-blue-500 shadow-lg">Contact</a>
         </div>
     </nav>
 
-    <section id="about" class="hero-mesh min-h-screen flex items-center pt-20 px-6">
+    <section id="about" class="hero-bg min-h-screen flex items-center pt-20 px-6">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12">
             <div>
                 <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-1 mb-6">
-                    <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span></span>
-                    <span class="text-blue-400 text-xs font-black uppercase tracking-widest">3.5 Years Corporate Experience</span>
+                    <span class="text-blue-400 text-xs font-black uppercase tracking-widest">3.5 Years Professional Experience</span>
                 </div>
-                <h1 class="text-6xl lg:text-8xl font-black tracking-tight leading-none mb-8">
-                    Engineering <br><span class="accent-text">Intelligence.</span>
+                <h1 class="text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight mb-8">
+                    Data Scientist & <br><span class="text-blue-500">Systems Architect.</span>
                 </h1>
-                <p class="text-slate-400 text-lg max-w-xl leading-relaxed mb-10">
-                    High-Impact Data Scientist and Systems Engineer dedicated to masterminding Python-driven business logic and dismantling operational bottlenecks. 
+                <p class="text-slate-400 text-lg leading-relaxed mb-10 max-w-xl">
+                    Specialized in masterminding Python-driven business logic and advanced SQL analytics to dismantle operational bottlenecks[cite: 5]. Transforming fragmented datasets into frictionless automated ecosystems[cite: 6].
                 </p>
                 <div class="flex flex-wrap gap-4">
-                    <div class="glass-dark px-6 py-4 rounded-2xl"><p class="text-2xl font-bold">0.99</p><p class="text-[10px] text-slate-500 uppercase font-black tracking-widest">Fraud Detection AUC</p></div>
-                    <div class="glass-dark px-6 py-4 rounded-2xl"><p class="text-2xl font-bold">7.5%</p><p class="text-[10px] text-slate-500 uppercase font-black tracking-widest">Well Prediction MAPE</p></div>
+                    <div class="bg-slate-900/50 p-4 rounded-xl border border-white/5"><p class="text-2xl font-bold">0.99</p><p class="text-[10px] text-slate-500 uppercase font-black">Fraud AUC</p></div>
+                    <div class="bg-slate-900/50 p-4 rounded-xl border border-white/5"><p class="text-2xl font-bold">7.5%</p><p class="text-[10px] text-slate-500 uppercase font-black">Forecast MAPE</p></div>
                 </div>
             </div>
-            <div class="hidden lg:block relative">
-                <div class="absolute inset-0 bg-blue-500/20 blur-[120px] rounded-full"></div>
-                <div class="relative glass-dark p-10 rounded-[40px] border-white/5">
-                    <h3 class="text-blue-400 font-black uppercase text-xs tracking-widest mb-8">Technical Arsenal</h3>
-                    <div class="grid grid-cols-2 gap-6">
-                        <div><p class="text-slate-500 text-[10px] font-black uppercase mb-2">Programming</p><p class="font-bold">Python, R, SQL</p></div>
-                        <div><p class="text-slate-500 text-[10px] font-black uppercase mb-2">Analytics</p><p class="font-bold">Tableau, Power BI</p></div>
-                        <div><p class="text-slate-500 text-[10px] font-black uppercase mb-2">Cloud/DB</p><p class="font-bold">AWS, Postgres</p></div>
-                        <div><p class="text-slate-500 text-[10px] font-black uppercase mb-2">Modeling</p><p class="font-bold">Bayesian, ARIMA</p></div>
+            <div class="hidden lg:flex items-center justify-center">
+                <div class="relative w-full h-80 bg-blue-500/10 rounded-[40px] border border-white/5 flex flex-col p-10">
+                    <h3 class="text-blue-400 font-bold uppercase text-xs mb-6">Experience Footprint</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between border-b border-white/5 pb-2"><span>Cognizant</span><span class="text-slate-500">Sr. Systems Engineer</span></div>
+                        <div class="flex justify-between border-b border-white/5 pb-2"><span>Paragon Digital</span><span class="text-slate-500">Data Engineer</span></div>
+                        <div class="flex justify-between border-b border-white/5 pb-2"><span>Texas A&M</span><span class="text-slate-500">Graduate TA</span></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="py-32 px-6 bg-slate-950">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-center text-4xl font-black mb-20 uppercase tracking-tighter">Professional <span class="text-blue-500">Pedigree</span></h2>
-            <div class="space-y-12">
-                
-                <div class="relative pl-8 border-l border-slate-800">
-                    <div class="absolute -left-1.5 top-0 h-3 w-3 rounded-full bg-blue-600 shadow-[0_0_10px_rgba(37,99,235,1)]"></div>
-                    <div class="flex justify-between items-start mb-4">
-                        <div><h3 class="text-2xl font-bold">Senior Systems Engineer</h3><p class="text-blue-400 font-bold text-sm">Cognizant Technology Solutions</p></div>
-                        <span class="text-slate-500 text-xs font-bold uppercase tracking-widest">2022 — 2023</span>
-                    </div>
-                    <p class="text-slate-400 text-sm leading-relaxed max-w-3xl">Masterminded enterprise-scale data collection and validation using Python and ServiceNow, translating complex analytical findings into compelling narratives for non-technical stakeholders. [cite: 65, 66, 68]</p>
-                </div>
-
-                <div class="relative pl-8 border-l border-slate-800">
-                    <div class="absolute -left-1.5 top-0 h-3 w-3 rounded-full bg-slate-700"></div>
-                    <div class="flex justify-between items-start mb-4">
-                        <div><h3 class="text-2xl font-bold">Data Engineer</h3><p class="text-blue-400 font-bold text-sm">Paragon Digital Services</p></div>
-                        <span class="text-slate-500 text-xs font-bold uppercase tracking-widest">2019 — 2022</span>
-                    </div>
-                    <p class="text-slate-400 text-sm leading-relaxed max-w-3xl">Architected robust ETL/ELT pipelines to automate data extraction, refining raw data into strategic intelligence assets for organizational planning. [cite: 73, 75]</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="py-32 px-6 bg-slate-900/50">
+    <section id="projects" class="py-32 px-6 bg-slate-900/30">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-center text-4xl font-black mb-20 uppercase tracking-tighter">Strategic <span class="text-blue-500">Analytics</span></h2>
+            <h2 class="text-4xl font-black mb-16 text-center uppercase tracking-tighter">Strategic <span class="text-blue-500">Case Studies</span></h2>
+            <p class="text-center text-slate-400 mb-12">Click any project to view technical methods, processes, and results.</p>
             
-            <div class="grid lg:grid-cols-2 gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <div class="glass-dark p-8 rounded-[32px] border-blue-500/20 group">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="bg-blue-600/20 p-3 rounded-2xl text-blue-400"><i class="fas fa-microchip fa-2xl"></i></div>
-                        <span class="bg-blue-900/40 text-blue-300 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest animate-pulse">In Development</span>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3 group-hover:text-blue-400 transition">SARATHI: Driving Safety AI</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-6">A real-time safety monitoring framework utilizing mobile sensor fusion and computer vision to detect hazardous driving patterns and proactive incident mitigation.</p>
+                <div onclick="openModal('fraudModal')" class="bg-slate-900 p-8 rounded-3xl border border-white/5 cursor-pointer hover:border-blue-500/50 transition-all group">
+                    <div class="text-blue-500 mb-6 group-hover:scale-110 transition"><i class="fas fa-shield-halved fa-3x"></i></div>
+                    <h3 class="text-xl font-bold mb-3">Financial Fraud Defense</h3>
+                    <p class="text-slate-500 text-sm mb-6">Attaining a 0.99 ROC-AUC score for proactive financial defense[cite: 40].</p>
+                    <span class="text-blue-400 text-xs font-bold uppercase">View Project Detail →</span>
                 </div>
 
-                <div class="glass-dark p-8 rounded-[32px] border-purple-500/20 group">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="bg-purple-600/20 p-3 rounded-2xl text-purple-400"><i class="fas fa-brain fa-2xl"></i></div>
-                        <span class="bg-purple-900/40 text-purple-300 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest animate-pulse">In Development</span>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3 group-hover:text-purple-400 transition">ANANTH: Multi-Modal GenAI</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Engineering a multi-modal AI engine for automated code, text, and video synthesis; optimizing backend architectures for low-latency prompt processing.</p>
+                <div onclick="openModal('oilModal')" class="bg-slate-900 p-8 rounded-3xl border border-white/5 cursor-pointer hover:border-blue-500/50 transition-all group">
+                    <div class="text-blue-500 mb-6 group-hover:scale-110 transition"><i class="fas fa-oil-can fa-3x"></i></div>
+                    <h3 class="text-xl font-bold mb-3">Well Production Forecast</h3>
+                    <p class="text-slate-500 text-sm mb-6">Forecasting output with 7.5% MAPE via Bayesian Inference[cite: 37].</p>
+                    <span class="text-blue-400 text-xs font-bold uppercase">View Project Detail →</span>
                 </div>
 
-                <div class="glass-dark p-8 rounded-[32px] border-white/5">
-                    <p class="text-blue-500 text-xs font-black uppercase tracking-widest mb-4">Master's Research: Oil & Gas</p>
-                    <h3 class="text-2xl font-bold mb-3">Well Production Forecasting</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Engineered a predictive ecosystem using ARIMA, VAR, and Bayesian Inference via R-INLA to forecast output with 7.5% MAPE. [cite: 83]</p>
-                    <div class="flex gap-2"><span class="bg-white/5 px-3 py-1 rounded-lg text-[10px] font-bold">R-INLA</span><span class="bg-white/5 px-3 py-1 rounded-lg text-[10px] font-bold">Postgres</span></div>
-                </div>
-
-                <div class="glass-dark p-8 rounded-[32px] border-white/5">
-                    <p class="text-blue-500 text-xs font-black uppercase tracking-widest mb-4">Master's Research: Fintech</p>
-                    <h3 class="text-2xl font-bold mb-3">Financial Fraud Defense</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Masterminded a ML pipeline utilizing SMOTE to resolve data skewness, attaining a 0.99 ROC-AUC score for proactive risk mitigation. [cite: 85, 87]</p>
-                    <div class="flex gap-2"><span class="bg-white/5 px-3 py-1 rounded-lg text-[10px] font-bold">Scikit-Learn</span><span class="bg-white/5 px-3 py-1 rounded-lg text-[10px] font-bold">AWS</span></div>
-                </div>
-
-                <div class="glass-dark p-8 rounded-[32px] border-white/5">
-                    <p class="text-blue-500 text-xs font-black uppercase tracking-widest mb-4">Master's Research: Climate</p>
-                    <h3 class="text-2xl font-bold mb-3">Spatiotemporal Modeling</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Integrated R-INLA and SPDE models to handle multi-dimensional environmental datasets, delivering high-confidence insights into ecosystem degradation. [cite: 90, 91]</p>
-                </div>
-
-                <div class="glass-dark p-8 rounded-[32px] border-white/5">
-                    <p class="text-blue-500 text-xs font-black uppercase tracking-widest mb-4">Master's Research: Education</p>
-                    <h3 class="text-2xl font-bold mb-3">Predictive Success KPI</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Engineered an analytical framework using regression architectures to quantify factors influencing academic achievement, attaining a perfect 1.0 R2 score. [cite: 78, 80]</p>
+                <div onclick="openModal('sarathiModal')" class="bg-slate-900 p-8 rounded-3xl border border-white/5 cursor-pointer hover:border-blue-500/50 transition-all group">
+                    <div class="text-blue-500 mb-6 group-hover:scale-110 transition"><i class="fas fa-microchip fa-3x"></i></div>
+                    <h3 class="text-xl font-bold mb-3">SARATHI (Safety AI)</h3>
+                    <p class="text-slate-500 text-sm mb-6">Real-time hazard notifications using sensor data (In Development).</p>
+                    <span class="text-blue-400 text-xs font-bold uppercase">View Project Detail →</span>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <footer class="py-20 text-center bg-slate-950 border-t border-white/5">
-        <p class="text-blue-500 font-black tracking-widest uppercase text-xs mb-4">Niranjan Reddy Bojja</p>
-        <p class="text-slate-600 text-[10px] uppercase font-bold">Systems Engineer • Data Scientist • AI Architect</p>
+    <section id="skills" class="py-32 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-black mb-16 text-center">Technical <span class="text-blue-500">Competencies</span></h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="skill-tag p-4 rounded-2xl text-center font-bold">AI & ML</div>
+                <div class="skill-tag p-4 rounded-2xl text-center font-bold">Computer Vision</div>
+                <div class="skill-tag p-4 rounded-2xl text-center font-bold">Data Pipelines</div>
+                <div class="skill-tag p-4 rounded-2xl text-center font-bold">Python (Expert)</div>
+                <div class="skill-tag p-4 rounded-2xl text-center font-bold">SQL (Advanced)</div>
+                <div class="skill-tag p-4 rounded-2xl text-center font-bold">AWS & Cloud</div>
+                <div class="skill-tag p-4 rounded-2xl text-center font-bold">Postgres</div>
+                <div class="skill-tag p-4 rounded-2xl text-center font-bold">Bayesian R-INLA</div>
+            </div>
+        </div>
+    </section>
+
+    <div id="fraudModal" class="modal">
+        <div class="modal-content">
+            <span onclick="closeModal('fraudModal')" class="float-right text-3xl cursor-pointer hover:text-blue-500">&times;</span>
+            <h2 class="text-3xl font-black text-blue-500 mb-6">Financial Fraud Detection</h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div>
+                    <h4 class="font-bold mb-2 uppercase text-xs text-slate-500">Methodology & Process</h4>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        Masterminded an ML pipeline using **Scikit-Learn** and **Keras**[cite: 87]. Employed **SMOTE** (Synthetic Minority Over-sampling Technique) to resolve extreme data skewness in transactional datasets[cite: 87].
+                    </p>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        **Architecture:** Deployed via **AWS** ensuring real-time processing and scalability for active risk mitigation[cite: 88].
+                    </p>
+                </div>
+                <div class="bg-slate-900/50 p-6 rounded-2xl">
+                    <h4 class="font-bold mb-4 uppercase text-xs text-slate-500">Results</h4>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between"><span>ROC-AUC Score:</span><span class="text-blue-400 font-bold">0.99</span></li>
+                        <li class="flex justify-between"><span>Deployment:</span><span class="text-blue-400 font-bold">AWS Cloud</span></li>
+                        <li class="flex justify-between"><span>Objective:</span><span class="text-blue-400 font-bold">Risk Defense</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="oilModal" class="modal">
+        <div class="modal-content">
+            <span onclick="closeModal('oilModal')" class="float-right text-3xl cursor-pointer hover:text-blue-500">&times;</span>
+            <h2 class="text-3xl font-black text-blue-500 mb-6">Well Production Forecasting</h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div>
+                    <h4 class="font-bold mb-2 uppercase text-xs text-slate-500">Methods Used</h4>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        Engineered a predictive ecosystem utilizing **ARIMA**, **VAR**, and **Bayesian Inference** via **R-INLA**[cite: 83]. 
+                    </p>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        **Process:** Utilized **Postgres** for efficient storage and retrieval of time-series data, ensuring high-fidelity integration with forecasting models[cite: 84].
+                    </p>
+                </div>
+                <div class="bg-slate-900/50 p-6 rounded-2xl">
+                    <h4 class="font-bold mb-4 uppercase text-xs text-slate-500">Impact & Data</h4>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between"><span>Accuracy (MAPE):</span><span class="text-blue-400 font-bold">7.5%</span></li>
+                        <li class="flex justify-between"><span>Database:</span><span class="text-blue-400 font-bold">Postgres</span></li>
+                        <li class="flex justify-between"><span>Target:</span><span class="text-blue-400 font-bold">Asset Optimization</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sarathiModal" class="modal">
+        <div class="modal-content">
+            <span onclick="closeModal('sarathiModal')" class="float-right text-3xl cursor-pointer hover:text-blue-500">&times;</span>
+            <h2 class="text-3xl font-black text-blue-500 mb-6">Project SARATHI (Active Dev)</h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div>
+                    <h4 class="font-bold mb-2 uppercase text-xs text-slate-500">Process & Vision</h4>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        Developing an AI-powered safety application to improve driving safety through real-time notifications and hazard alerts.
+                    </p>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        **Technology:** Implementing **Computer Vision** (OpenCV) for pattern recognition and **Data Pipelines** for mobile sensor analysis.
+                    </p>
+                </div>
+                <div class="bg-slate-900/50 p-6 rounded-2xl">
+                    <h4 class="font-bold mb-4 uppercase text-xs text-slate-500">Roadmap</h4>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between"><span>Current Phase:</span><span class="text-blue-400 font-bold">Development</span></li>
+                        <li class="flex justify-between"><span>Core Tools:</span><span class="text-blue-400 font-bold">Python, OpenCV</span></li>
+                        <li class="flex justify-between"><span>Focus:</span><span class="text-blue-400 font-bold">Safety Standards</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(id) { document.getElementById(id).style.display = "block"; document.body.style.overflow = "hidden"; }
+        function closeModal(id) { document.getElementById(id).style.display = "none"; document.body.style.overflow = "auto"; }
+        window.onclick = function(event) { if (event.target.className === "modal") { event.target.style.display = "none"; document.body.style.overflow = "auto"; } }
+    </script>
+
+    <footer class="py-20 text-center border-t border-white/5">
+        <p class="text-xs font-bold text-slate-500 uppercase tracking-widest">© 2026 Niranjan Reddy Bojja | Data & Systems Architect</p>
     </footer>
 
 </body>
