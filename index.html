@@ -3,132 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Niranjan Reddy Bojja | Portfolio</title>
+    <title>Niranjan Reddy Bojja | Strategic Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-        .glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
-        .gradient-text { background: linear-gradient(135deg, #003366 0%, #0066cc 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .project-card:hover { transform: translateY(-10px); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        .glass-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.3); }
+        .gradient-bg { background: radial-gradient(circle at top right, #e0f2fe, #f8fafc); }
+        .hero-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
+        .project-expand:hover { transform: scale(1.02); transition: all 0.4s ease; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 leading-relaxed">
+<body class="gradient-bg text-slate-900">
 
-    <nav class="fixed w-full z-50 glass border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="text-2xl font-extrabold tracking-tighter gradient-text">NRB.</span>
-            <div class="hidden md:flex space-x-8 font-semibold text-sm uppercase tracking-widest">
-                <a href="#about" class="hover:text-blue-600 transition">About</a>
-                <a href="#ai-innovations" class="hover:text-blue-600 transition">AI Platforms</a>
-                <a href="#research" class="hover:text-blue-600 transition">Data Research</a>
-                <a href="#experience" class="hover:text-blue-600 transition">Experience</a>
+    <nav class="fixed w-full z-50 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center glass-card rounded-2xl px-8 py-3 shadow-xl">
+            <span class="text-2xl font-extrabold tracking-tighter text-slate-900">NRB<span class="text-blue-600">.</span></span>
+            <div class="hidden md:flex space-x-8 font-bold text-xs uppercase tracking-widest text-slate-500">
+                <a href="#vision" class="hover:text-blue-600 transition">Vision</a>
+                <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
+                <a href="#arsenal" class="hover:text-blue-600 transition">Arsenal</a>
             </div>
-            <a href="mailto:bojjaniranjanreddy1998@gmail.com" class="bg-blue-900 text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-blue-700 transition shadow-lg">Get In Touch</a>
+            <a href="mailto:bojjaniranjanreddy1998@gmail.com" class="bg-blue-600 text-white px-6 py-2 rounded-xl text-sm font-bold shadow-lg hover:bg-blue-700 transition">Hire Me</a>
         </div>
     </nav>
 
-    <section class="pt-32 pb-20 px-6 bg-gradient-to-b from-white to-slate-50">
-        <div class="max-w-5xl mx-auto text-center">
-            <h1 class="text-6xl md:text-7xl font-extrabold mb-6 tracking-tight text-slate-900">
-                Engineering the <span class="gradient-text">Digital Pulse</span>
-            </h1>
-            <p class="text-xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed">
-                Strategic Data Scientist and Systems Engineer. I architect high-velocity automated ecosystems, predictive R&D frameworks, and AI-powered safety solutions. [cite: 2, 4, 7]
-            </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <span class="bg-blue-50 text-blue-700 px-4 py-2 rounded-lg font-bold border border-blue-100"><i class="fab fa-python mr-2"></i>Python Expert</span>
-                <span class="bg-blue-50 text-blue-700 px-4 py-2 rounded-lg font-bold border border-blue-100"><i class="fas fa-database mr-2"></i>SQL Architect</span>
-                <span class="bg-blue-50 text-blue-700 px-4 py-2 rounded-lg font-bold border border-blue-100"><i class="fas fa-microchip mr-2"></i>AI/ML Engineer</span>
-            </div>
-        </div>
-    </section>
-
-    <section id="ai-innovations" class="py-20 px-6 max-w-7xl mx-auto">
-        <div class="flex items-center space-x-4 mb-12">
-            <h2 class="text-4xl font-bold">Independent AI Innovations</h2>
-            <div class="h-1 flex-grow bg-slate-200"></div>
-        </div>
-        
-        <div class="grid md:grid-cols-2 gap-10">
-            <div class="bg-white rounded-3xl p-8 shadow-xl project-card border border-slate-100">
-                <div class="bg-blue-900 w-12 h-12 rounded-2xl flex items-center justify-center text-white mb-6">
-                    <i class="fas fa-shield-virus fa-lg"></i>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">SARATHI: AI Driving Safety Ecosystem</h3>
-                <p class="text-slate-600 mb-6">
-                    A real-time safety monitoring framework utilizing mobile sensor fusion and ML to detect hazardous driving patterns. Designed to reduce incident rates through proactive hazard notifications.
+    <section id="vision" class="pt-40 pb-20 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest">Data Scientist & Systems Engineer</span>
+                <h1 class="text-6xl md:text-7xl font-extrabold mt-6 mb-8 tracking-tighter leading-none">
+                    Engineering the <span class="text-blue-600">Digital Pulse.</span>
+                </h1>
+                <p class="text-lg text-slate-600 mb-10 leading-relaxed">
+                    Highly analytical professional specialized in leveraging **Python** and **Advanced SQL** to architect efficient data ecosystems. Transforming fragmented datasets into actionable intelligence[cite: 55, 56].
                 </p>
-                <div class="flex gap-2 mb-6">
-                    <span class="text-xs font-bold uppercase tracking-wider bg-slate-100 px-3 py-1 rounded-full">Computer Vision</span>
-                    <span class="text-xs font-bold uppercase tracking-wider bg-slate-100 px-3 py-1 rounded-full">Sensor Data</span>
+                <div class="flex gap-4">
+                    <div class="text-center">
+                        <p class="text-3xl font-black text-slate-900">5+</p>
+                        <p class="text-xs font-bold text-slate-400 uppercase">Years Exp</p>
+                    </div>
+                    <div class="w-px h-10 bg-slate-200 mx-4"></div>
+                    <div class="text-center">
+                        <p class="text-3xl font-black text-slate-900">0.99</p>
+                        <p class="text-xs font-bold text-slate-400 uppercase">Fraud AUC</p>
+                    </div>
                 </div>
             </div>
-
-            <div class="bg-white rounded-3xl p-8 shadow-xl project-card border border-slate-100">
-                <div class="bg-blue-600 w-12 h-12 rounded-2xl flex items-center justify-center text-white mb-6">
-                    <i class="fas fa-brain fa-lg"></i>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">ANANTH: Multi-Modal GenAI Platform</h3>
-                <p class="text-slate-600 mb-6">
-                    A comprehensive AI engine for automated code, text, and video synthesis. Optimized backend architectures to handle multi-modal user prompts with high accuracy and low latency.
-                </p>
-                <div class="flex gap-2 mb-6">
-                    <span class="text-xs font-bold uppercase tracking-wider bg-slate-100 px-3 py-1 rounded-full">Generative AI</span>
-                    <span class="text-xs font-bold uppercase tracking-wider bg-slate-100 px-3 py-1 rounded-full">Backend Engineering</span>
+            <div class="relative">
+                <div class="absolute -inset-4 bg-blue-400/20 blur-3xl rounded-full"></div>
+                <div class="relative glass-card p-8 rounded-3xl shadow-2xl">
+                    <h3 class="font-bold text-blue-600 mb-4 uppercase tracking-widest text-xs">Core Expertise</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 font-semibold text-slate-700"><i class="fas fa-check-circle text-blue-500"></i> ETL/ELT Lifecycle Orchestration [cite: 101]</li>
+                        <li class="flex items-center gap-3 font-semibold text-slate-700"><i class="fas fa-check-circle text-blue-500"></i> Bayesian Spatiotemporal Modeling [cite: 98]</li>
+                        <li class="flex items-center gap-3 font-semibold text-slate-700"><i class="fas fa-check-circle text-blue-500"></i> High-Fidelity Data Governance [cite: 57]</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="research" class="py-20 bg-slate-900 text-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-12">Strategic Data Research (Texas A&M)</h2>
-            <div class="grid md:grid-cols-3 gap-8">
+    <section id="projects" class="py-24 px-6 bg-slate-50">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-black mb-16 text-center">Strategic Project <span class="text-blue-600">Deep Dives</span></h2>
+            
+            <div class="grid gap-12">
                 
-                <div class="p-8 border border-slate-700 rounded-3xl hover:bg-slate-800 transition">
-                    <h4 class="text-xl font-bold mb-3 text-blue-400">7.5% MAPE</h4>
-                    <p class="font-semibold mb-2">Oil & Gas Forecasting</p>
-                    <p class="text-slate-400 text-sm">Engineered a predictive ecosystem using ARIMA and Bayesian Inference (R-INLA) to forecast well production output. [cite: 35, 37]</p>
+                <div class="glass-card rounded-[3rem] overflow-hidden shadow-2xl flex flex-col md:flex-row project-expand border-l-8 border-orange-500">
+                    <div class="md:w-1/3 bg-orange-500 p-12 flex flex-col justify-center text-white">
+                        <i class="fas fa-shield-alt text-6xl mb-6"></i>
+                        <h3 class="text-3xl font-black leading-tight mb-4">Financial Fraud Detection</h3>
+                        <p class="text-orange-100 font-medium">Proactive Mitigation & Risk Defense [cite: 85]</p>
+                    </div>
+                    <div class="md:w-2/3 p-12 bg-white">
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="font-bold text-orange-600 uppercase text-xs mb-3">The Mission</h4>
+                                <p class="text-slate-600 text-sm leading-relaxed">Masterminded a comprehensive Machine Learning pipeline using **Scikit-Learn** and **Keras**, employing **SMOTE** to resolve high data skewness[cite: 87].</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-orange-600 uppercase text-xs mb-3">Key Outcome</h4>
+                                <p class="text-slate-900 font-black text-2xl tracking-tighter">0.99 ROC-AUC Score [cite: 87]</p>
+                                <p class="text-slate-500 text-xs">Deployed via **AWS** for real-time scalability[cite: 88].</p>
+                            </div>
+                        </div>
+                        <div class="mt-8 pt-8 border-t border-slate-100 flex gap-4">
+                            <span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-lg text-xs font-bold">AWS</span>
+                            <span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-lg text-xs font-bold">Neural Networks</span>
+                            <span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-lg text-xs font-bold">Risk Management [cite: 88]</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="p-8 border border-slate-700 rounded-3xl hover:bg-slate-800 transition">
-                    <h4 class="text-xl font-bold mb-3 text-blue-400">0.99 ROC-AUC</h4>
-                    <p class="font-semibold mb-2">Financial Fraud Defense</p>
-                    <p class="text-slate-400 text-sm">Masterminded an end-to-end ML pipeline utilizing SMOTE to resolve data skewness and enable proactive financial defense. [cite: 38, 39, 40]</p>
+                <div class="glass-card rounded-[3rem] overflow-hidden shadow-2xl flex flex-col md:flex-row project-expand border-l-8 border-blue-600">
+                    <div class="md:w-1/3 bg-blue-600 p-12 flex flex-col justify-center text-white">
+                        <i class="fas fa-oil-can text-6xl mb-6"></i>
+                        <h3 class="text-3xl font-black leading-tight mb-4">Well Production Forecasting</h3>
+                        <p class="text-blue-100 font-medium">Time Series Intelligence [cite: 83]</p>
+                    </div>
+                    <div class="md:w-2/3 p-12 bg-white">
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="font-bold text-blue-600 uppercase text-xs mb-3">Technical Stack</h4>
+                                <p class="text-slate-600 text-sm leading-relaxed">Engineered a predictive ecosystem utilizing **ARIMA**, **VAR**, and **Bayesian Inference** via **R-INLA**[cite: 83].</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-blue-600 uppercase text-xs mb-3">Accuracy Metric</h4>
+                                <p class="text-slate-900 font-black text-2xl tracking-tighter">7.5% MAPE [cite: 83]</p>
+                                <p class="text-slate-500 text-xs">Integrated with **Postgres** for seamless data retrieval[cite: 84].</p>
+                            </div>
+                        </div>
+                        <div class="mt-8 pt-8 border-t border-slate-100 flex gap-4">
+                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-lg text-xs font-bold">R-INLA</span>
+                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-lg text-xs font-bold">Postgres</span>
+                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-lg text-xs font-bold">Strategic Asset Optimization [cite: 83]</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="p-8 border border-slate-700 rounded-3xl hover:bg-slate-800 transition">
-                    <h4 class="text-xl font-bold mb-3 text-blue-400">R-INLA & SPDE</h4>
-                    <p class="font-semibold mb-2">Climate Stressor Modeling</p>
-                    <p class="text-slate-400 text-sm">Analyzed multi-dimensional environmental datasets to deliver high-confidence insights into ecosystem degradation. [cite: 41, 44]</p>
+                <div class="glass-card rounded-[3rem] overflow-hidden shadow-2xl flex flex-col md:flex-row project-expand border-l-8 border-emerald-500">
+                    <div class="md:w-1/3 bg-emerald-500 p-12 flex flex-col justify-center text-white">
+                        <i class="fas fa-globe-americas text-6xl mb-6"></i>
+                        <h3 class="text-3xl font-black leading-tight mb-4">Climate Stressor Modeling</h3>
+                        <p class="text-emerald-100 font-medium">Spatiotemporal Analytics [cite: 90]</p>
+                    </div>
+                    <div class="md:w-2/3 p-12 bg-white">
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="font-bold text-emerald-600 uppercase text-xs mb-3">The Analysis</h4>
+                                <p class="text-slate-600 text-sm leading-relaxed">Integrated **R-INLA** and **SPDE** models to handle multi-dimensional environmental datasets, delivering insights into ecosystem degradation[cite: 91].</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-emerald-600 uppercase text-xs mb-3">Impact</h4>
+                                <p class="text-slate-900 font-black text-xl tracking-tighter leading-tight">High Statistical Confidence Insights [cite: 91]</p>
+                                <p class="text-slate-500 text-xs">Informative for global conservation strategies[cite: 92].</p>
+                            </div>
+                        </div>
+                        <div class="mt-8 pt-8 border-t border-slate-100 flex gap-4">
+                            <span class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-lg text-xs font-bold">SPDE</span>
+                            <span class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-lg text-xs font-bold">Environmental Data</span>
+                            <span class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-lg text-xs font-bold">Spatiotemporal Impacts [cite: 92]</span>
+                        </div>
+                    </div>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <section id="experience" class="py-20 px-6 max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-8">Professional Pedigree</h2>
-        <div class="space-y-6">
-            <div class="flex items-center justify-between border-b pb-4">
-                <span class="font-bold text-lg">Senior Systems Engineer</span>
-                <span class="text-blue-900 font-bold">Cognizant [cite: 14, 15]</span>
-            </div>
-            <div class="flex items-center justify-between border-b pb-4">
-                <span class="font-bold text-lg">Data Engineer</span>
-                <span class="text-blue-900 font-bold">Paragon Digital [cite: 24, 25]</span>
-            </div>
-            <div class="flex items-center justify-between border-b pb-4">
-                <span class="font-bold text-lg">Graduate Teaching Assistant</span>
-                <span class="text-blue-900 font-bold">Texas A&M [cite: 19, 20]</span>
+    <section id="arsenal" class="py-24 px-6 hero-gradient text-white overflow-hidden relative">
+        <div class="max-w-7xl mx-auto relative z-10">
+            <h2 class="text-4xl font-black mb-16 text-center">Technical <span class="text-blue-400">Arsenal</span></h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                
+                <div class="bg-white/5 border border-white/10 p-10 rounded-3xl hover:bg-white/10 transition">
+                    <i class="fas fa-code text-blue-400 text-4xl mb-6"></i>
+                    <h4 class="text-xl font-bold mb-4">Programming</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Expert proficiency in **Python** (Pandas, NumPy, Matplotlib) and **R** (Bayesian Inference, R-INLA)[cite: 98].</p>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 p-10 rounded-3xl hover:bg-white/10 transition">
+                    <i class="fas fa-database text-blue-400 text-4xl mb-6"></i>
+                    <h4 class="text-xl font-bold mb-4">Databases & Cloud</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Advanced **SQL** (CTEs, Window Functions) leveraging **Postgres** and **AWS** for scalable solutions[cite: 99].</p>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 p-10 rounded-3xl hover:bg-white/10 transition">
+                    <i class="fas fa-chart-line text-blue-400 text-4xl mb-6"></i>
+                    <h4 class="text-xl font-bold mb-4">BI & Visualization</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Impactful dashboards created using **Power BI**, **Tableau**, and **Excel** (Macros/Power Query)[cite: 100].</p>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <footer class="py-10 text-center text-slate-400 border-t">
-        <p>&copy; 2026 Niranjan Reddy Bojja | Strategic Data Science & Systems Engineering</p>
+    <footer class="py-12 text-center text-slate-400 border-t border-slate-200 bg-white">
+        <p class="font-bold text-slate-900 mb-2">NIRANJAN REDDY BOJJA</p>
+        <p class="text-xs font-bold uppercase tracking-widest">© 2026 | Built for Executive Impact</p>
     </footer>
 
 </body>
