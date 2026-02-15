@@ -8,179 +8,174 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
-        .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .hero-bg { background: radial-gradient(circle at top right, #1e293b, #0f172a); }
-        .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); overflow-y: auto; }
-        .modal-content { background: #1e293b; margin: 5% auto; padding: 40px; border-radius: 24px; width: 90%; max-width: 900px; color: #f1f5f9; }
-        .skill-tag { background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); color: #60a5fa; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; background-color: #020617; }
+        .glass-nav { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .project-card { background: #0f172a; border: 1px solid rgba(255, 255, 255, 0.05); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; }
+        .project-card:hover { transform: translateY(-10px); border-color: #3b82f6; box-shadow: 0 0 30px rgba(59, 130, 246, 0.2); }
+        .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background: rgba(2, 6, 23, 0.98); overflow-y: auto; }
+        .modal-content { background: #1e293b; margin: 5% auto; padding: 40px; border-radius: 32px; width: 95%; max-width: 900px; border: 1px solid rgba(59, 130, 246, 0.3); }
+        .dropdown-content { display: none; position: absolute; background: #1e293b; min-width: 200px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
+        .dropdown:hover .dropdown-content { display: block; }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-200">
+<body class="text-slate-200">
 
-    <nav class="fixed w-full z-50 px-6 py-4">
-        <div class="max-w-7xl mx-auto flex justify-between items-center glass rounded-2xl px-8 py-3 shadow-2xl">
-            <span class="text-2xl font-black tracking-tighter uppercase text-white">NRB<span class="text-blue-500">.</span></span>
-            <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-slate-400">
-                <a href="#about" class="hover:text-blue-400 transition">About</a>
-                <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
-                <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
+    <nav class="fixed w-full z-50 glass-nav px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <span class="text-2xl font-black tracking-tighter text-white">NRB<span class="text-blue-500">.</span></span>
+            
+            <div class="hidden md:flex space-x-8 items-center text-xs font-bold uppercase tracking-widest text-slate-400">
+                <a href="#about" class="hover:text-blue-400 transition">Strategy</a>
+                
+                <div class="dropdown relative">
+                    <button class="hover:text-blue-400 transition flex items-center gap-2 uppercase">Projects <i class="fas fa-chevron-down text-[10px]"></i></button>
+                    <div class="dropdown-content mt-4 p-4 space-y-3">
+                        <a href="#projects" class="block hover:text-blue-400 text-[10px]">AI Innovations</a>
+                        <a href="#projects" class="block hover:text-blue-400 text-[10px]">Research Deep Dives</a>
+                    </div>
+                </div>
+
+                <a href="#skills" class="hover:text-blue-400 transition">Arsenal</a>
             </div>
-            <a href="mailto:bojjaniranjanreddy1998@gmail.com" class="bg-blue-600 text-white px-6 py-2 rounded-xl text-sm font-bold hover:bg-blue-500 shadow-lg">Contact</a>
+
+            <div class="flex items-center gap-4">
+                <a href="B_NIRANJAN_REDDY_RESUME (1).pdf" download class="bg-blue-600 text-white px-5 py-2 rounded-xl text-xs font-black uppercase tracking-widest hover:bg-blue-500 transition shadow-[0_0_15px_rgba(37,99,235,0.4)]">
+                    <i class="fas fa-download mr-2"></i> Download CV
+                </a>
+            </div>
         </div>
     </nav>
 
-    <section id="about" class="hero-bg min-h-screen flex items-center pt-20 px-6">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12">
+    <section id="about" class="min-h-screen flex items-center px-6 relative overflow-hidden pt-20">
+        <div class="absolute top-1/4 right-0 w-96 h-96 bg-blue-600/10 blur-[120px] rounded-full"></div>
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
             <div>
-                <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-1 mb-6">
-                    <span class="text-blue-400 text-xs font-black uppercase tracking-widest">3.5 Years Professional Experience</span>
+                <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-1 mb-8">
+                    <span class="text-blue-400 text-[10px] font-black uppercase tracking-widest">3.5 Years Professional Pedigree</span>
                 </div>
-                <h1 class="text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight mb-8">
-                    Data Scientist & <br><span class="text-blue-500">Systems Architect.</span>
+                <h1 class="text-6xl lg:text-8xl font-black tracking-tight mb-8">
+                    Engineering <br><span class="text-blue-500 italic">Systems.</span>
                 </h1>
-                <p class="text-slate-400 text-lg leading-relaxed mb-10 max-w-xl">
-                    Specialized in masterminding Python-driven business logic and advanced SQL analytics to dismantle operational bottlenecks[cite: 5]. Transforming fragmented datasets into frictionless automated ecosystems[cite: 6].
+                <p class="text-slate-400 text-lg leading-relaxed max-w-xl mb-12">
+                    Strategic Data Scientist and Systems Engineer dedicated to masterminding Python-driven business logic[cite: 5, 55, 67]. I bridge the gap between complex IT architecture and executive stakeholder vision[cite: 7, 18, 68].
                 </p>
-                <div class="flex flex-wrap gap-4">
-                    <div class="bg-slate-900/50 p-4 rounded-xl border border-white/5"><p class="text-2xl font-bold">0.99</p><p class="text-[10px] text-slate-500 uppercase font-black">Fraud AUC</p></div>
-                    <div class="bg-slate-900/50 p-4 rounded-xl border border-white/5"><p class="text-2xl font-bold">7.5%</p><p class="text-[10px] text-slate-500 uppercase font-black">Forecast MAPE</p></div>
-                </div>
-            </div>
-            <div class="hidden lg:flex items-center justify-center">
-                <div class="relative w-full h-80 bg-blue-500/10 rounded-[40px] border border-white/5 flex flex-col p-10">
-                    <h3 class="text-blue-400 font-bold uppercase text-xs mb-6">Experience Footprint</h3>
-                    <div class="space-y-4">
-                        <div class="flex justify-between border-b border-white/5 pb-2"><span>Cognizant</span><span class="text-slate-500">Sr. Systems Engineer</span></div>
-                        <div class="flex justify-between border-b border-white/5 pb-2"><span>Paragon Digital</span><span class="text-slate-500">Data Engineer</span></div>
-                        <div class="flex justify-between border-b border-white/5 pb-2"><span>Texas A&M</span><span class="text-slate-500">Graduate TA</span></div>
-                    </div>
+                <div class="flex gap-6">
+                    <div class="text-center"><p class="text-3xl font-bold text-white">0.99</p><p class="text-[10px] text-slate-500 uppercase font-black">Fraud AUC</p></div>
+                    <div class="h-10 w-px bg-slate-800"></div>
+                    <div class="text-center"><p class="text-3xl font-bold text-white">7.5%</p><p class="text-[10px] text-slate-500 uppercase font-black">Well MAPE</p></div>
+                    <div class="h-10 w-px bg-slate-800"></div>
+                    <div class="text-center"><p class="text-3xl font-bold text-white">1.0</p><p class="text-[10px] text-slate-500 uppercase font-black">Success R²</p></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="py-32 px-6 bg-slate-900/30">
+    <section id="projects" class="py-32 px-6">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-black mb-16 text-center uppercase tracking-tighter">Strategic <span class="text-blue-500">Case Studies</span></h2>
-            <p class="text-center text-slate-400 mb-12">Click any project to view technical methods, processes, and results.</p>
-            
+            <h2 class="text-4xl font-black mb-20 text-center uppercase tracking-tighter text-blue-500">Strategic Analytics Portfolio</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <div onclick="openModal('fraudModal')" class="bg-slate-900 p-8 rounded-3xl border border-white/5 cursor-pointer hover:border-blue-500/50 transition-all group">
-                    <div class="text-blue-500 mb-6 group-hover:scale-110 transition"><i class="fas fa-shield-halved fa-3x"></i></div>
-                    <h3 class="text-xl font-bold mb-3">Financial Fraud Defense</h3>
-                    <p class="text-slate-500 text-sm mb-6">Attaining a 0.99 ROC-AUC score for proactive financial defense[cite: 40].</p>
-                    <span class="text-blue-400 text-xs font-bold uppercase">View Project Detail →</span>
+
+                <div onclick="openModal('sarathiModal')" class="project-card p-10 rounded-[32px]">
+                    <div class="text-blue-500 mb-8"><i class="fas fa-microchip fa-3x"></i></div>
+                    <h3 class="text-2xl font-bold mb-4">SARATHI Safety AI</h3>
+                    <p class="text-slate-500 text-xs font-black uppercase tracking-widest mb-4 animate-pulse">In Development</p>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">AI-powered driving safety ecosystem utilizing mobile sensor fusion to improve safety.</p>
+                    <span class="text-blue-400 text-[10px] font-black uppercase tracking-widest">Case Study →</span>
                 </div>
 
-                <div onclick="openModal('oilModal')" class="bg-slate-900 p-8 rounded-3xl border border-white/5 cursor-pointer hover:border-blue-500/50 transition-all group">
-                    <div class="text-blue-500 mb-6 group-hover:scale-110 transition"><i class="fas fa-oil-can fa-3x"></i></div>
-                    <h3 class="text-xl font-bold mb-3">Well Production Forecast</h3>
-                    <p class="text-slate-500 text-sm mb-6">Forecasting output with 7.5% MAPE via Bayesian Inference[cite: 37].</p>
-                    <span class="text-blue-400 text-xs font-bold uppercase">View Project Detail →</span>
+                <div onclick="openModal('ananthModal')" class="project-card p-10 rounded-[32px]">
+                    <div class="text-blue-500 mb-8"><i class="fas fa-brain fa-3x"></i></div>
+                    <h3 class="text-2xl font-bold mb-4">ANANTH GenAI</h3>
+                    <p class="text-slate-500 text-xs font-black uppercase tracking-widest mb-4 animate-pulse">In Development</p>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Multi-modal AI tool for automated code, text, and video synthesis.</p>
+                    <span class="text-blue-400 text-[10px] font-black uppercase tracking-widest">Case Study →</span>
                 </div>
 
-                <div onclick="openModal('sarathiModal')" class="bg-slate-900 p-8 rounded-3xl border border-white/5 cursor-pointer hover:border-blue-500/50 transition-all group">
-                    <div class="text-blue-500 mb-6 group-hover:scale-110 transition"><i class="fas fa-microchip fa-3x"></i></div>
-                    <h3 class="text-xl font-bold mb-3">SARATHI (Safety AI)</h3>
-                    <p class="text-slate-500 text-sm mb-6">Real-time hazard notifications using sensor data (In Development).</p>
-                    <span class="text-blue-400 text-xs font-bold uppercase">View Project Detail →</span>
+                <div onclick="openModal('fraudModal')" class="project-card p-10 rounded-[32px]">
+                    <div class="text-blue-500 mb-8"><i class="fas fa-shield-halved fa-3x"></i></div>
+                    <h3 class="text-2xl font-bold mb-4">Fraud Defense</h3>
+                    <p class="text-slate-500 text-xs font-black uppercase tracking-widest mb-4">Texas A&M Research</p>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Masterminded an ML pipeline using Scikit-Learn and Keras achieving a 0.99 ROC-AUC score [cite: 38-40, 85-87].</p>
+                    <span class="text-blue-400 text-[10px] font-black uppercase tracking-widest">Case Study →</span>
+                </div>
+
+                <div onclick="openModal('oilModal')" class="project-card p-10 rounded-[32px]">
+                    <div class="text-blue-500 mb-8"><i class="fas fa-oil-can fa-3x"></i></div>
+                    <h3 class="text-2xl font-bold mb-4">Well Forecasting</h3>
+                    <p class="text-slate-500 text-xs font-black uppercase tracking-widest mb-4">Texas A&M Research</p>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Engineered a predictive ecosystem via R-INLA forecasting output with 7.5% MAPE [cite: 35-37, 82-83].</p>
+                    <span class="text-blue-400 text-[10px] font-black uppercase tracking-widest">Case Study →</span>
+                </div>
+
+                <div onclick="openModal('academicModal')" class="project-card p-10 rounded-[32px]">
+                    <div class="text-blue-500 mb-8"><i class="fas fa-graduation-cap fa-3x"></i></div>
+                    <h3 class="text-2xl font-bold mb-4">Success Analytics</h3>
+                    <p class="text-slate-500 text-xs font-black uppercase tracking-widest mb-4">Texas A&M Research</p>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Achieved a perfect 1.0 R² score quantifying factors influencing academic achievement [cite: 31-34, 78-80].</p>
+                    <span class="text-blue-400 text-[10px] font-black uppercase tracking-widest">Case Study →</span>
+                </div>
+
+                <div onclick="openModal('budgetModal')" class="project-card p-10 rounded-[32px]">
+                    <div class="text-blue-500 mb-8"><i class="fas fa-wallet fa-3x"></i></div>
+                    <h3 class="text-2xl font-bold mb-4">Budget Intelligence</h3>
+                    <p class="text-slate-500 text-xs font-black uppercase tracking-widest mb-4">Analytical Tool</p>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Executed non-parametric bootstrap analysis transforming financial data into a predictive asset [cite: 45-47, 93-95].</p>
+                    <span class="text-blue-400 text-[10px] font-black uppercase tracking-widest">Case Study →</span>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <section id="skills" class="py-32 px-6">
+    <section id="skills" class="py-32 px-6 bg-slate-900/50">
         <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl font-black mb-16 text-center">Technical <span class="text-blue-500">Competencies</span></h2>
+            <h2 class="text-3xl font-black mb-16 text-center text-blue-500">TECHNICAL ARSENAL</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="skill-tag p-4 rounded-2xl text-center font-bold">AI & ML</div>
-                <div class="skill-tag p-4 rounded-2xl text-center font-bold">Computer Vision</div>
-                <div class="skill-tag p-4 rounded-2xl text-center font-bold">Data Pipelines</div>
-                <div class="skill-tag p-4 rounded-2xl text-center font-bold">Python (Expert)</div>
-                <div class="skill-tag p-4 rounded-2xl text-center font-bold">SQL (Advanced)</div>
-                <div class="skill-tag p-4 rounded-2xl text-center font-bold">AWS & Cloud</div>
-                <div class="skill-tag p-4 rounded-2xl text-center font-bold">Postgres</div>
-                <div class="skill-tag p-4 rounded-2xl text-center font-bold">Bayesian R-INLA</div>
+                <div class="bg-slate-800 p-6 rounded-2xl text-center border border-white/5"><p class="text-xs font-bold">AI & ML</p></div>
+                <div class="bg-slate-800 p-6 rounded-2xl text-center border border-white/5"><p class="text-xs font-bold">Computer Vision</p></div>
+                <div class="bg-slate-800 p-6 rounded-2xl text-center border border-white/5"><p class="text-xs font-bold">Data Pipelines</p></div>
+                <div class="bg-slate-800 p-6 rounded-2xl text-center border border-white/5"><p class="text-xs font-bold">Python (Pandas)</p></div>
+                <div class="bg-slate-800 p-6 rounded-2xl text-center border border-white/5"><p class="text-xs font-bold">Advanced SQL</p></div>
+                <div class="bg-slate-800 p-6 rounded-2xl text-center border border-white/5"><p class="text-xs font-bold">AWS & Cloud</p></div>
+                <div class="bg-slate-800 p-6 rounded-2xl text-center border border-white/5"><p class="text-xs font-bold">Postgres</p></div>
+                <div class="bg-slate-800 p-6 rounded-2xl text-center border border-white/5"><p class="text-xs font-bold">R-INLA</p></div>
             </div>
         </div>
     </section>
-
-    <div id="fraudModal" class="modal">
-        <div class="modal-content">
-            <span onclick="closeModal('fraudModal')" class="float-right text-3xl cursor-pointer hover:text-blue-500">&times;</span>
-            <h2 class="text-3xl font-black text-blue-500 mb-6">Financial Fraud Detection</h2>
-            <div class="grid md:grid-cols-2 gap-10">
-                <div>
-                    <h4 class="font-bold mb-2 uppercase text-xs text-slate-500">Methodology & Process</h4>
-                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
-                        Masterminded an ML pipeline using **Scikit-Learn** and **Keras**[cite: 87]. Employed **SMOTE** (Synthetic Minority Over-sampling Technique) to resolve extreme data skewness in transactional datasets[cite: 87].
-                    </p>
-                    <p class="text-slate-300 text-sm leading-relaxed">
-                        **Architecture:** Deployed via **AWS** ensuring real-time processing and scalability for active risk mitigation[cite: 88].
-                    </p>
-                </div>
-                <div class="bg-slate-900/50 p-6 rounded-2xl">
-                    <h4 class="font-bold mb-4 uppercase text-xs text-slate-500">Results</h4>
-                    <ul class="space-y-4">
-                        <li class="flex justify-between"><span>ROC-AUC Score:</span><span class="text-blue-400 font-bold">0.99</span></li>
-                        <li class="flex justify-between"><span>Deployment:</span><span class="text-blue-400 font-bold">AWS Cloud</span></li>
-                        <li class="flex justify-between"><span>Objective:</span><span class="text-blue-400 font-bold">Risk Defense</span></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="oilModal" class="modal">
-        <div class="modal-content">
-            <span onclick="closeModal('oilModal')" class="float-right text-3xl cursor-pointer hover:text-blue-500">&times;</span>
-            <h2 class="text-3xl font-black text-blue-500 mb-6">Well Production Forecasting</h2>
-            <div class="grid md:grid-cols-2 gap-10">
-                <div>
-                    <h4 class="font-bold mb-2 uppercase text-xs text-slate-500">Methods Used</h4>
-                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
-                        Engineered a predictive ecosystem utilizing **ARIMA**, **VAR**, and **Bayesian Inference** via **R-INLA**[cite: 83]. 
-                    </p>
-                    <p class="text-slate-300 text-sm leading-relaxed">
-                        **Process:** Utilized **Postgres** for efficient storage and retrieval of time-series data, ensuring high-fidelity integration with forecasting models[cite: 84].
-                    </p>
-                </div>
-                <div class="bg-slate-900/50 p-6 rounded-2xl">
-                    <h4 class="font-bold mb-4 uppercase text-xs text-slate-500">Impact & Data</h4>
-                    <ul class="space-y-4">
-                        <li class="flex justify-between"><span>Accuracy (MAPE):</span><span class="text-blue-400 font-bold">7.5%</span></li>
-                        <li class="flex justify-between"><span>Database:</span><span class="text-blue-400 font-bold">Postgres</span></li>
-                        <li class="flex justify-between"><span>Target:</span><span class="text-blue-400 font-bold">Asset Optimization</span></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div id="sarathiModal" class="modal">
         <div class="modal-content">
             <span onclick="closeModal('sarathiModal')" class="float-right text-3xl cursor-pointer hover:text-blue-500">&times;</span>
-            <h2 class="text-3xl font-black text-blue-500 mb-6">Project SARATHI (Active Dev)</h2>
-            <div class="grid md:grid-cols-2 gap-10">
+            <h2 class="text-4xl font-black text-blue-500 mb-8 uppercase">SARATHI driving safety ai</h2>
+            <div class="grid md:grid-cols-2 gap-12 text-sm leading-relaxed">
                 <div>
-                    <h4 class="font-bold mb-2 uppercase text-xs text-slate-500">Process & Vision</h4>
-                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
-                        Developing an AI-powered safety application to improve driving safety through real-time notifications and hazard alerts.
-                    </p>
-                    <p class="text-slate-300 text-sm leading-relaxed">
-                        **Technology:** Implementing **Computer Vision** (OpenCV) for pattern recognition and **Data Pipelines** for mobile sensor analysis.
-                    </p>
+                    <h4 class="text-blue-400 font-black uppercase mb-4 tracking-widest">Methods & Processes</h4>
+                    <p class="text-slate-300 mb-4">Developed a real-time safety monitoring tool designed to reduce hazard levels through proactive driver alerts.</p>
+                    <p class="text-slate-300">Implementing <b>Computer Vision</b> and <b>Data Pipelines</b> to analyze mobile sensor data.</p>
                 </div>
-                <div class="bg-slate-900/50 p-6 rounded-2xl">
-                    <h4 class="font-bold mb-4 uppercase text-xs text-slate-500">Roadmap</h4>
-                    <ul class="space-y-4">
-                        <li class="flex justify-between"><span>Current Phase:</span><span class="text-blue-400 font-bold">Development</span></li>
-                        <li class="flex justify-between"><span>Core Tools:</span><span class="text-blue-400 font-bold">Python, OpenCV</span></li>
-                        <li class="flex justify-between"><span>Focus:</span><span class="text-blue-400 font-bold">Safety Standards</span></li>
-                    </ul>
+                <div class="bg-slate-900 p-8 rounded-3xl">
+                    <h4 class="text-slate-500 font-black uppercase mb-4 tracking-widest text-xs">Current Results</h4>
+                    <p class="text-blue-400 font-bold mb-2 uppercase">Status: In-Development</p>
+                    <p class="text-slate-400">Targeting global Smart City safety standards through real-time notifications.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fraudModal" class="modal">
+        <div class="modal-content">
+            <span onclick="closeModal('fraudModal')" class="float-right text-3xl cursor-pointer hover:text-blue-500">&times;</span>
+            <h2 class="text-4xl font-black text-blue-500 mb-8 uppercase">Financial Fraud defense</h2>
+            <div class="grid md:grid-cols-2 gap-12 text-sm leading-relaxed">
+                <div>
+                    <h4 class="text-blue-400 font-black uppercase mb-4 tracking-widest">Methods & Processes</h4>
+                    <p class="text-slate-300 mb-4">Masterminded a ML pipeline using Scikit-Learn and Keras, employing SMOTE to resolve data skewness[cite: 39, 87].</p>
+                    <p class="text-slate-300">Deployed the model on AWS for real-time processing and proactive defense[cite: 88].</p>
+                </div>
+                <div class="bg-slate-900 p-8 rounded-3xl">
+                    <h4 class="text-slate-500 font-black uppercase mb-4 tracking-widest text-xs">Key Result</h4>
+                    <p class="text-blue-400 font-bold mb-2 uppercase text-2xl">0.99 ROC-AUC</p>
+                    <p class="text-slate-400 text-xs">Highly scalable real-time processing[cite: 87, 88].</p>
                 </div>
             </div>
         </div>
@@ -193,7 +188,7 @@
     </script>
 
     <footer class="py-20 text-center border-t border-white/5">
-        <p class="text-xs font-bold text-slate-500 uppercase tracking-widest">© 2026 Niranjan Reddy Bojja | Data & Systems Architect</p>
+        <p class="text-[10px] font-black text-slate-500 uppercase tracking-widest">© 2026 Niranjan Reddy Bojja | Built for Executive Impact</p>
     </footer>
 
 </body>
