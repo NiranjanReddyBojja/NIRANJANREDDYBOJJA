@@ -97,7 +97,7 @@ An aspiring Doctoral Researcher and Software Engineer driving innovation at the 
       <img src="https://img.shields.io/badge/%F0%9F%93%8A%20Ecosystem-Analytics-38B2AC?style=for-the-badge" alt="Analytics Header" />
       <br/><br/>
       <p align="center">
-        <img src="https://github-readme-stats.vercel.app/api?username=NiranjanReddyBojja&show_icons=true&theme=tokyonight&count_private=true&include_all_commits=true&hide_border=true" width="100%" alt="General Analytics" />
+        <img src="https://github-readme-stats.vercel.app/api?username=NiranjanReddyBojja&show_icons=true&theme=dark&include_all_commits=true&count_private=true" width="100%" alt="General Analytics" />
       </p>
     </td>
   </tr>
@@ -108,12 +108,8 @@ An aspiring Doctoral Researcher and Software Engineer driving innovation at the 
 ## 📈 Engineering Consistency & Contribution Matrix
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=NiranjanReddyBojja&layout=compact&theme=tokyonight&hide_border=true&langs_count=6" width="49%" alt="Language Distribution" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=NiranjanReddyBojja&theme=tokyonight&hide_border=true" width="49%" alt="Streak Tracker" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=NiranjanReddyBojja&theme=tokyonight&bg_color=1a1b26&hide_border=true" width="100%" alt="Contribution Wave Matrix" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=NiranjanReddyBojja&layout=compact&theme=dark" width="49%" alt="Language Distribution" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=NiranjanReddyBojja&theme=dark" width="49%" alt="Streak Tracker" />
 </p>
 
 ---
