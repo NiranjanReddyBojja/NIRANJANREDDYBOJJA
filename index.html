@@ -5,399 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Niranjan Reddy Bojja | Portfolio</title>
     <style>
-        /* --- Deep Oceanic Blue High-Contrast Theme Variables --- */
-        :root {
-            --bg-abyss: #030a16;          /* Deepest ocean floor background */
-            --bg-trench: #061329;         /* Card / Secondary surface background */
-            --bg-surface: #0a1f3d;        /* UI Element / Interactive background */
-            --border-oceanic: #123363;    /* Distinct divider/border lines */
-            
-            /* High Contrast Text & Accents (Complies with WCAG AAA Standards) */
-            --text-foam: #f0f7ff;         /* Pure crisp white-blue for primary headings */
-            --text-mist: #a3c2e0;         /* Soft high-visibility light blue-gray for body copy */
-            --accent-cyan: #00f0ff;       /* Electric bioluminescent cyan for highlights & interactive points */
-            --accent-glow: rgba(0, 240, 255, 0.15);
-            
-            --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+       /* --- DEEP OCEANIC BLUE HIGH-CONTRAST THEME --- */
+:root {
+    /* Background Hierarchy (Abyss to Surface) */
+    --bg-abyss: #020813;          /* Deepest ocean background */
+    --bg-trench: #071426;         /* Box backgrounds */
+    --bg-surface: #0c223f;        /* Hover states & interactive elements */
+    --border-oceanic: #163663;    /* High-contrast structural dividers */
+    
+    /* Text Typography (WCAG AAA Compliant Contrast) */
+    --text-foam: #f0f7ff;         /* Crisp, high-luminance white-blue for titles */
+    --text-mist: #b2cbfa;         /* Highly legible soft blue-gray for body copy */
+    
+    /* Interactive Accent Accents */
+    --accent-cyan: #00f0ff;       /* Bioluminescent electric cyan for highlights */
+    --accent-glow: rgba(0, 240, 255, 0.15);
+}
 
-        /* --- Global Reset & Base Setup --- */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+/* --- Global Overrides --- */
+body {
+    background-color: var(--bg-abyss) !important;
+    color: var(--text-mist) !important;
+}
 
-        html {
-            scroll-behavior: smooth;
-            background-color: var(--bg-abyss);
-            font-family: var(--font-main);
-            color: var(--text-mist);
-        }
+/* --- Typography Colors --- */
+h1, h2, h3, h4, th, strong, b {
+    color: var(--text-foam) !important;
+}
 
-        body {
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+p, span, li, td {
+    color: var(--text-mist) !important;
+}
 
-        /* --- Navigation --- */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(3, 10, 22, 0.85);
-            backdrop-filter: blur(12px);
-            border-bottom: 2px solid var(--border-oceanic);
-            z-index: 1000;
-        }
+/* --- Navigation / Header Modifications --- */
+nav, header {
+    background-color: rgba(2, 8, 19, 0.9) !important;
+    border-bottom: 2px solid var(--border-oceanic) !important;
+    backdrop-filter: blur(12px);
+}
 
-        nav > div {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1.25rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+nav a, header a {
+    color: var(--text-foam) !important;
+}
 
-        nav span {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--text-foam);
-            letter-spacing: -0.5px;
-        }
+nav a:hover, header a:hover {
+    color: var(--accent-cyan) !important;
+}
 
-        nav span span {
-            color: var(--accent-cyan);
-        }
+/* --- Button / Interactive Enhancements --- */
+.download-cv, .btn-primary, button {
+    background-color: transparent !important;
+    border: 2px solid var(--accent-cyan) !important;
+    color: var(--accent-cyan) !important;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
 
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            align-items: center;
-        }
+.download-cv:hover, .btn-primary:hover, button:hover {
+    background-color: var(--accent-cyan) !important;
+    color: var(--bg-abyss) !important;
+    box-shadow: 0 0 15px var(--accent-glow) !important;
+}
 
-        .nav-links a {
-            color: var(--text-foam);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: var(--transition-smooth);
-            position: relative;
-        }
+/* --- Card & Section Architecture (Leaving Projects untouched) --- */
+.project-card, .card, .box, section > div {
+    background-color: var(--bg-trench) !important;
+    border: 2px solid var(--border-oceanic) !important;
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-        .nav-links a:hover {
-            color: var(--accent-cyan);
-        }
+/* Dynamic Hover Actions for Grid Boxes */
+.project-card:hover, .card:hover, .box:hover {
+    border-color: var(--accent-cyan) !important;
+    background-color: var(--bg-surface) !important;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 240, 255, 0.1) !important;
+}
 
-        .download-cv {
-            background-color: transparent;
-            border: 2px solid var(--accent-cyan);
-            color: var(--accent-cyan);
-            padding: 0.6rem 1.25rem;
-            border-radius: 6px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            transition: var(--transition-smooth);
-            cursor: pointer;
-            text-decoration: none;
-        }
+/* Status Badges or Accents inside your content */
+.status, .badge, .tag {
+    background-color: var(--bg-surface) !important;
+    border: 1px solid var(--accent-cyan) !important;
+    color: var(--accent-cyan) !important;
+}
 
-        .download-cv:hover {
-            background-color: var(--accent-cyan);
-            color: var(--bg-abyss);
-            box-shadow: 0 0 15px var(--accent-glow);
-        }
+/* Metric text highlights (e.g., your 0.99 AUC, 7.5% MAPE) */
+.metric, .highlight, h1 span, h2 span {
+    color: var(--accent-cyan) !important;
+    text-shadow: 0 0 15px var(--accent-glow);
+}
 
-        /* --- Layout Common Framework --- */
-        section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 8rem 2rem 4rem 2rem;
-        }
+/* --- Table Enhancements --- */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
 
-        h1, h2, h3, h4 {
-            color: var(--text-foam);
-            font-weight: 700;
-        }
+th, td {
+    border-bottom: 1px solid var(--border-oceanic) !important;
+    padding: 12px;
+}
 
-        /* --- Hero Section --- */
-        .hero-section {
-            min-height: 85vh;
-            display: flex;
-            align-items: center;
-            padding-top: 10rem;
-        }
+tr:hover {
+    background-color: rgba(12, 34, 63, 0.4) !important;
+}
 
-        .badge {
-            display: inline-block;
-            background-color: var(--bg-surface);
-            border: 1px solid var(--accent-cyan);
-            color: var(--accent-cyan);
-            padding: 0.4rem 1rem;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .hero-section h1 {
-            font-size: 4rem;
-            line-height: 1.15;
-            margin-bottom: 1.5rem;
-            letter-spacing: -1px;
-        }
-
-        .hero-section h1 span {
-            color: var(--accent-cyan);
-            text-shadow: 0 0 20px var(--accent-glow);
-        }
-
-        .hero-section p {
-            font-size: 1.25rem;
-            max-width: 700px;
-            color: var(--text-mist);
-            margin-bottom: 3.5rem;
-        }
-
-        .hero-section p b {
-            color: var(--text-foam);
-            border-bottom: 1px dashed var(--accent-cyan);
-        }
-
-        /* Top Metrics Block */
-        .metrics-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            max-width: 800px;
-            border-top: 2px solid var(--border-oceanic);
-            padding-top: 2.5rem;
-        }
-
-        .metric-card p:first-child {
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--accent-cyan);
-            line-height: 1;
-            margin-bottom: 0.5rem;
-        }
-
-        .metric-card p:last-child {
-            font-size: 0.95rem;
-            color: var(--text-foam);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* --- Case Studies Grid --- */
-        .section-title {
-            font-size: 2.25rem;
-            margin-bottom: 3rem;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 60px;
-            height: 4px;
-            background-color: var(--accent-cyan);
-            border-radius: 2px;
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background-color: var(--bg-trench);
-            border: 2px solid var(--border-oceanic);
-            border-radius: 12px;
-            padding: 2rem;
-            transition: var(--transition-smooth);
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .project-card:hover {
-            border-color: var(--accent-cyan);
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0, 240, 255, 0.08);
-            background-color: var(--bg-surface);
-        }
-
-        .project-card h3 {
-            font-size: 1.35rem;
-            margin: 1rem 0 0.5rem 0;
-        }
-
-        .project-card .status {
-            font-size: 0.8rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: var(--accent-cyan);
-            letter-spacing: 0.5px;
-            margin-bottom: 1rem;
-        }
-
-        .project-card p {
-            font-size: 0.95rem;
-            color: var(--text-mist);
-            margin-bottom: 1.5rem;
-            flex-grow: 1;
-        }
-
-        .project-card .action-link {
-            font-weight: 700;
-            font-size: 0.9rem;
-            color: var(--text-foam);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: var(--transition-smooth);
-        }
-
-        .project-card:hover .action-link {
-            color: var(--accent-cyan);
-        }
-
-        /* --- Technical Arsenal / Tags --- */
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .skill-tag {
-            background-color: var(--bg-trench);
-            border: 2px solid var(--border-oceanic);
-            border-radius: 8px;
-            padding: 0.8rem 1.5rem;
-            transition: var(--transition-smooth);
-        }
-
-        .skill-tag:hover {
-            border-color: var(--accent-cyan);
-            background-color: var(--bg-surface);
-        }
-
-        .skill-tag p {
-            font-weight: 700;
-            color: var(--text-foam);
-            font-size: 1rem;
-        }
-
-        /* --- Modal Architectures --- */
-        .modal {
-            display: none; /* Controlled via JS for interactive dive-ins */
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(3, 10, 22, 0.9);
-            backdrop-filter: blur(8px);
-            z-index: 2000;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-        }
-
-        .modal-content {
-            background-color: var(--bg-trench);
-            border: 2px solid var(--accent-cyan);
-            border-radius: 16px;
-            max-width: 750px;
-            width: 100%;
-            padding: 3rem;
-            position: relative;
-            box-shadow: 0 20px 50px rgba(0, 240, 255, 0.15);
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 1.5rem;
-            right: 1.5rem;
-            font-size: 2rem;
-            color: var(--text-mist);
-            cursor: pointer;
-            transition: var(--transition-smooth);
-            line-height: 1;
-        }
-
-        .close-modal:hover {
-            color: var(--accent-cyan);
-        }
-
-        .modal-content h2 {
-            font-size: 2.25rem;
-            margin-bottom: 2rem;
-            border-bottom: 2px solid var(--border-oceanic);
-            padding-bottom: 1rem;
-        }
-
-        .modal-body {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            gap: 2.5rem;
-        }
-
-        .modal-pane h4 {
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--accent-cyan);
-            margin-bottom: 1rem;
-        }
-
-        .modal-pane p {
-            margin-bottom: 1rem;
-            font-size: 1rem;
-            color: var(--text-mist);
-        }
-
-        .modal-pane b {
-            color: var(--text-foam);
-        }
-
-        /* --- Footer --- */
-        footer {
-            border-top: 2px solid var(--border-oceanic);
-            background-color: var(--bg-abyss);
-            padding: 3rem 2rem;
-            text-align: center;
-            margin-top: 6rem;
-        }
-
-        footer p {
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: var(--text-mist);
-        }
-
-        /* --- Responsiveness Optimization --- */
-        @media (max-width: 850px) {
-            .hero-section h1 { font-size: 2.75rem; }
-            .metrics-container { grid-template-columns: 1fr; gap: 1.5rem; }
-            .modal-body { grid-template-columns: 1fr; gap: 1.5rem; }
-            .modal-content { padding: 2rem; }
-            .nav-links { display: none; } /* Mobile considerations */
-        }
+/* --- Footer Area --- */
+footer {
+    border-top: 2px solid var(--border-oceanic) !important;
+    background-color: var(--bg-abyss) !important;
+}
     </style>
 </head>
 <body>
