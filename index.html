@@ -5,263 +5,652 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Niranjan Reddy Bojja | Portfolio</title>
     <style>
-       /* --- DEEP OCEANIC BLUE HIGH-CONTRAST THEME --- */
-:root {
-    /* Background Hierarchy (Abyss to Surface) */
-    --bg-abyss: #020813;          /* Deepest ocean background */
-    --bg-trench: #071426;         /* Box backgrounds */
-    --bg-surface: #0c223f;        /* Hover states & interactive elements */
-    --border-oceanic: #163663;    /* High-contrast structural dividers */
-    
-    /* Text Typography (WCAG AAA Compliant Contrast) */
-    --text-foam: #f0f7ff;         /* Crisp, high-luminance white-blue for titles */
-    --text-mist: #b2cbfa;         /* Highly legible soft blue-gray for body copy */
-    
-    /* Interactive Accent Accents */
-    --accent-cyan: #00f0ff;       /* Bioluminescent electric cyan for highlights */
-    --accent-glow: rgba(0, 240, 255, 0.15);
-}
+        /* --- Deep Oceanic Blue & Premium White Palette --- */
+        :root {
+            --bg-body: #f4f7fc;           /* Crisp, clean soft white-blue background */
+            --bg-card: #ffffff;           /* Pure white for prominent card layouts */
+            --deep-ocean: #0a2540;        /* Deep premium oceanic navy for primary text & headers */
+            --ocean-blue: #0066cc;        /* Vibrant ocean blue for links, actions, and primary accents */
+            --sea-foam: #e6f0fa;          /* Soft secondary blue tint for badges and interactive states */
+            --border-tint: #d0e0f0;       /* Subtle oceanic border accent */
+            
+            /* Typography Scale */
+            --text-dark: #0a2540;         /* Primary deep navy typography color */
+            --text-muted: #4a607a;        /* Mid-tone slate blue for body text descriptions */
+            --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-/* --- Global Overrides --- */
-body {
-    background-color: var(--bg-abyss) !important;
-    color: var(--text-mist) !important;
-}
+        /* --- Global Structural Reset --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-/* --- Typography Colors --- */
-h1, h2, h3, h4, th, strong, b {
-    color: var(--text-foam) !important;
-}
+        html {
+            scroll-behavior: smooth;
+            background-color: var(--bg-body);
+            font-family: var(--font-main);
+            color: var(--text-dark);
+        }
 
-p, span, li, td {
-    color: var(--text-mist) !important;
-}
+        body {
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-/* --- Navigation / Header Modifications --- */
-nav, header {
-    background-color: rgba(2, 8, 19, 0.9) !important;
-    border-bottom: 2px solid var(--border-oceanic) !important;
-    backdrop-filter: blur(12px);
-}
+        /* --- Navigation Architecture --- */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-tint);
+            z-index: 1000;
+        }
 
-nav a, header a {
-    color: var(--text-foam) !important;
-}
+        nav > div {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-nav a:hover, header a:hover {
-    color: var(--accent-cyan) !important;
-}
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--deep-ocean);
+            letter-spacing: -0.5px;
+            text-decoration: none;
+        }
 
-/* --- Button / Interactive Enhancements --- */
-.download-cv, .btn-primary, button {
-    background-color: transparent !important;
-    border: 2px solid var(--accent-cyan) !important;
-    color: var(--accent-cyan) !important;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-}
+        .logo span {
+            color: var(--ocean-blue);
+        }
 
-.download-cv:hover, .btn-primary:hover, button:hover {
-    background-color: var(--accent-cyan) !important;
-    color: var(--bg-abyss) !important;
-    box-shadow: 0 0 15px var(--accent-glow) !important;
-}
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
 
-/* --- Card & Section Architecture (Leaving Projects untouched) --- */
-.project-card, .card, .box, section > div {
-    background-color: var(--bg-trench) !important;
-    border: 2px solid var(--border-oceanic) !important;
-    border-radius: 12px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition-smooth);
+        }
 
-/* Dynamic Hover Actions for Grid Boxes */
-.project-card:hover, .card:hover, .box:hover {
-    border-color: var(--accent-cyan) !important;
-    background-color: var(--bg-surface) !important;
-    transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(0, 240, 255, 0.1) !important;
-}
+        .nav-links a:hover {
+            color: var(--ocean-blue);
+        }
 
-/* Status Badges or Accents inside your content */
-.status, .badge, .tag {
-    background-color: var(--bg-surface) !important;
-    border: 1px solid var(--accent-cyan) !important;
-    color: var(--accent-cyan) !important;
-}
+        .contact-cta {
+            background-color: var(--ocean-blue);
+            color: #ffffff;
+            padding: 0.6rem 1.25rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition-smooth);
+            text-decoration: none;
+        }
 
-/* Metric text highlights (e.g., your 0.99 AUC, 7.5% MAPE) */
-.metric, .highlight, h1 span, h2 span {
-    color: var(--accent-cyan) !important;
-    text-shadow: 0 0 15px var(--accent-glow);
-}
+        .contact-cta:hover {
+            background-color: var(--deep-ocean);
+            transform: translateY(-1px);
+        }
 
-/* --- Table Enhancements --- */
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
+        /* --- Layout Common Framework --- */
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem 2rem;
+        }
 
-th, td {
-    border-bottom: 1px solid var(--border-oceanic) !important;
-    padding: 12px;
-}
+        h1, h2, h3 {
+            color: var(--deep-ocean);
+            font-weight: 700;
+        }
 
-tr:hover {
-    background-color: rgba(12, 34, 63, 0.4) !important;
-}
+        /* --- Hero Layout --- */
+        .hero-section {
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
+            padding-top: 11rem;
+        }
 
-/* --- Footer Area --- */
-footer {
-    border-top: 2px solid var(--border-oceanic) !important;
-    background-color: var(--bg-abyss) !important;
-}
+        .badge {
+            display: inline-block;
+            background-color: var(--sea-foam);
+            border: 1px solid var(--border-tint);
+            color: var(--ocean-blue);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-section h1 {
+            font-size: 3.75rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .hero-section h1 span {
+            color: var(--ocean-blue);
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            max-width: 750px;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+        }
+
+        .hero-section p b {
+            color: var(--deep-ocean);
+        }
+
+        /* Essential Profile Metadata Blocks */
+        .contact-meta-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            border-top: 1px solid var(--border-tint);
+            padding-top: 2rem;
+            max-width: 850px;
+        }
+
+        .meta-block {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .meta-block span {
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-muted);
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .meta-block p {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--deep-ocean);
+            margin: 0;
+        }
+
+        .meta-block a {
+            color: var(--ocean-blue);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+        
+        .meta-block a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Interactive Project Grid View --- */
+        .section-title {
+            font-size: 2.25rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50px;
+            height: 4px;
+            background-color: var(--ocean-blue);
+            border-radius: 2px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-tint);
+            border-radius: 12px;
+            padding: 2.25rem;
+            transition: var(--transition-smooth);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 6px rgba(10, 37, 64, 0.02);
+        }
+
+        .project-card:hover {
+            border-color: var(--ocean-blue);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(10, 37, 64, 0.06);
+        }
+
+        .project-card .status {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--ocean-blue);
+            background-color: var(--sea-foam);
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 1.25rem;
+            letter-spacing: 0.5px;
+        }
+
+        .project-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .project-card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .project-card .action-trigger {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--ocean-blue);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* --- Technical Arsenal Area --- */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .skill-tag {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-tint);
+            border-radius: 8px;
+            padding: 0.8rem 1.5rem;
+            box-shadow: 0 2px 4px rgba(10, 37, 64, 0.01);
+            transition: var(--transition-smooth);
+        }
+
+        .skill-tag:hover {
+            border-color: var(--ocean-blue);
+            background-color: var(--sea-foam);
+        }
+
+        .skill-tag p {
+            font-weight: 700;
+            color: var(--deep-ocean);
+            font-size: 0.95rem;
+        }
+
+        /* --- Dynamic Popup Modals Systems --- */
+        .modal {
+            display: none; /* Interactivity injected programmatically via vanilla JS setup below */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(10, 37, 64, 0.5);
+            backdrop-filter: blur(6px);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.2s ease-out;
+        }
+
+        .modal.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background-color: var(--bg-card);
+            border-radius: 16px;
+            max-width: 650px;
+            width: 100%;
+            padding: 3rem;
+            position: relative;
+            box-shadow: 0 24px 48px rgba(10, 37, 64, 0.15);
+            transform: scale(0.95);
+            transition: transform 0.2s ease-out;
+        }
+
+        .modal.active .modal-content {
+            transform: scale(1);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 1.75rem;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            line-height: 1;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: var(--bg-body);
+        }
+
+        .close-modal:hover {
+            color: var(--deep-ocean);
+            background-color: var(--border-tint);
+        }
+
+        .modal-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1.25rem;
+            padding-right: 2rem;
+        }
+
+        .modal-status {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--ocean-blue);
+            background-color: var(--sea-foam);
+            padding: 0.3rem 0.75rem;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.5px;
+        }
+
+        .modal-description {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .modal-meta-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            border-top: 1px solid var(--border-tint);
+            padding-top: 1.5rem;
+        }
+
+        .modal-meta-item h4 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+
+        .modal-meta-item p {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--deep-ocean);
+        }
+
+        /* --- Footer Layout --- */
+        footer {
+            border-top: 1px solid var(--border-tint);
+            background-color: var(--bg-card);
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 8rem;
+        }
+
+        footer p {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        /* --- Fluid Responsiveness Breakpoints --- */
+        @media (max-width: 850px) {
+            .hero-section h1 { font-size: 2.75rem; }
+            .contact-meta-container { flex-direction: column; gap: 1.25rem; }
+            .modal-content { padding: 2rem 1.5rem; }
+            .modal-meta-grid { grid-template-columns: 1fr; gap: 1rem; }
+            .nav-links { display: none; }
+        }
     </style>
 </head>
 <body>
 
-    <!-- Navigation Bar Layer -->
+    <!-- App Navigation Frame -->
     <nav>
         <div>
-            <span>NRB<span>.</span></span>
+            <a href="#" class="logo">NRB<span>.</span></a>
             <div class="nav-links">
                 <a href="#about">Strategy</a>
-                <a href="#projects">AI Innovations</a>
+                <a href="#projects">Case Studies</a>
                 <a href="#skills">Arsenal</a>
             </div>
-            <a class="download-cv" download href="B_NIRANJAN_REDDY_RESUME (1).pdf">
-                Download CV
-            </a>
+            <a class="contact-cta" href="mailto:bojjaniranjanreddy1998@gmail.com">Get In Touch</a>
         </div>
     </nav>
 
-    <!-- Hero Content Layer -->
+    <!-- Hero Framework Area -->
     <section class="hero-section" id="about">
         <div>
-            <div class="badge">3.5 Years of Systems &amp; Data Mastery</div>
-            <h1>Engineering <br><span>Intelligence.</span></h1>
+            <div class="badge">Data Science &amp; Systems Architecture</div>
+            <h1>Engineering Intelligence &amp;<br><span>Maximizing Business Velocity.</span></h1>
             <p>
-                Highly analytical Data Scientist specialized in masterminding <b>Python-driven business logic</b> and advanced <b>SQL analytics</b> to dismantle operational bottlenecks and catalyze Business Velocity.
+                Highly analytical Systems Architect and Data Scientist specialized in masterminding <b>Python-driven business logic</b> and advanced <b>SQL analytics</b> to dismantle complex operational bottlenecks.
             </p>
             
-            <div class="metrics-container">
-                <div class="metric-card">
-                    <p>0.99</p>
-                    <p>Fraud AUC</p>
+            <div class="contact-meta-container">
+                <div class="meta-block">
+                    <span>Experience Spectrum</span>
+                    <p>4+ Years Professional Mastery</p>
                 </div>
-                <div class="metric-card">
-                    <p>7.5%</p>
-                    <p>Forecast MAPE</p>
+                <div class="meta-block">
+                    <span>Direct Secure Line</span>
+                    <p><a href="tel:+13616888101">+1 (361) 688-8101</a></p>
                 </div>
-                <div class="metric-card">
-                    <p>1.0</p>
-                    <p>Success R²</p>
+                <div class="meta-block">
+                    <span>Primary Communications Gateway</span>
+                    <p><a href="mailto:bojjaniranjanreddy1998@gmail.com">bojjaniranjanreddy1998@gmail.com</a></p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Case Studies / Projects Layer -->
+    <!-- Unaltered Case Studies Grid View -->
     <section id="projects">
         <h2 class="section-title">Comprehensive Case Studies</h2>
         <div class="grid-container">
 
-            <div class="project-card">
+            <!-- Card 1 -->
+            <div class="project-card" onclick="openProjectModal('SARATHI Safety AI', 'In Development', 'AI driving safety application utilizing sensor fusion for hazard mitigation.', 'Advanced Computer Vision, Sensor Fusion Layer, Python Logic Engine', 'Real-time Predictive Edge Inference')">
                 <div>
                     <div class="status">In Development</div>
                     <h3>SARATHI Safety AI</h3>
                     <p>AI driving safety application utilizing sensor fusion for hazard mitigation.</p>
                 </div>
-                <span class="action-link">Deep Dive →</span>
+                <span class="action-trigger">Deep Dive View →</span>
             </div>
 
-            <div class="project-card">
+            <!-- Card 2 -->
+            <div class="project-card" onclick="openProjectModal('ANANTH GenAI', 'In Development', 'Multi-modal AI engine for automated code, text, and video synthesis.', 'Generative LLM Pipelines, Vector Data Stores, Streamlined Execution', 'Automated Content & Asset Lifecycle Creation')">
                 <div>
                     <div class="status">In Development</div>
                     <h3>ANANTH GenAI</h3>
                     <p>Multi-modal AI engine for automated code, text, and video synthesis.</p>
                 </div>
-                <span class="action-link">Deep Dive →</span>
+                <span class="action-trigger">Deep Dive View →</span>
             </div>
 
-            <div class="project-card">
+            <!-- Card 3 -->
+            <div class="project-card" onclick="openProjectModal('Fraud Defense System', 'Research Framework', 'ML pipeline utilizing SMOTE attaining a 0.99 ROC-AUC score on AWS.', 'Scikit-Learn, SMOTE Resampling, AWS Cloud Infrastructure', '0.99 ROC-AUC Score Metrics Optimization')">
                 <div>
                     <div class="status">Research Framework</div>
                     <h3>Fraud Defense</h3>
                     <p>ML pipeline utilizing SMOTE attaining a 0.99 ROC-AUC score on AWS.</p>
                 </div>
-                <span class="action-link">Deep Dive →</span>
+                <span class="action-trigger">Deep Dive View →</span>
             </div>
 
-            <div class="project-card">
+            <!-- Card 4 -->
+            <div class="project-card" onclick="openProjectModal('Well Production Forecasting', 'Research Framework', 'Predictive ecosystem via R-INLA forecasting output with 7.5% MAPE.', 'Bayesian R-INLA Architecture, Complex Time-Series Engines', '7.5% Absolute Forecast Accuracy (MAPE)')">
                 <div>
                     <div class="status">Research Framework</div>
                     <h3>Well Forecasting</h3>
                     <p>Predictive ecosystem via R-INLA forecasting output with 7.5% MAPE.</p>
                 </div>
-                <span class="action-link">Deep Dive →</span>
+                <span class="action-trigger">Deep Dive View →</span>
             </div>
 
-            <div class="project-card">
+            <!-- Card 5 -->
+            <div class="project-card" onclick="openProjectModal('Success Analytics Model', 'Research Framework', 'Regression architectures achieving a perfect 1.0 R² success quantification.', 'Advanced Regression Arrays, Outlier Filtering Frameworks', 'Perfect 1.0 R² Deterministic Metric Extraction')">
                 <div>
                     <div class="status">Research Framework</div>
                     <h3>Success Analytics</h3>
                     <p>Regression architectures achieving a perfect 1.0 R² success quantification.</p>
                 </div>
-                <span class="action-link">Deep Dive →</span>
+                <span class="action-trigger">Deep Dive View →</span>
             </div>
 
-            <div class="project-card">
+            <!-- Card 6 -->
+            <div class="project-card" onclick="openProjectModal('Climate Stressors Mapping', 'Research Framework', 'Spatiotemporal modeling using R-INLA and SPDE for ecosystem data.', 'R-INLA Core Engine, SPDE Mesh Structures, Spatial Variograms', 'Dynamic Predictive Environmental Hazard Models')">
                 <div>
                     <div class="status">Research Framework</div>
                     <h3>Climate Stressors</h3>
                     <p>Spatiotemporal modeling using R-INLA and SPDE for ecosystem data.</p>
                 </div>
-                <span class="action-link">Deep Dive →</span>
+                <span class="action-trigger">Deep Dive View →</span>
             </div>
 
-            <div class="project-card">
+            <!-- Card 7 -->
+            <div class="project-card" onclick="openProjectModal('Budget Intel Engine', 'Financial Tool', 'Non-parametric bootstrap analysis for predictive spending patterns.', 'Non-parametric Bootstrap Algorithms, Python Predictive Arrays', 'Empirical Multi-scenario Financial Risk Estimates')">
                 <div>
                     <div class="status">Financial Tool</div>
                     <h3>Budget Intel</h3>
                     <p>Non-parametric bootstrap analysis for predictive spending patterns.</p>
                 </div>
-                <span class="action-link">Deep Dive →</span>
+                <span class="action-trigger">Deep Dive View →</span>
             </div>
 
-            <div class="project-card">
+            <!-- Card 8 -->
+            <div class="project-card" onclick="openProjectModal('Enterprise Data Ecosystems', 'Industrial Tenure', 'Orchestrating production-grade ETL/ELT lifecycles at Cognizant and Paragon to optimize institutional pipeline runtimes.', 'Advanced Enterprise SQL Frameworks, Industrial ETL Architecture', 'Minimized Runtime Latency across Large Databases')">
                 <div>
                     <div class="status">Industrial Tenure</div>
                     <h3>Data Ecosystems</h3>
                     <p>Orchestrating ETL/ELT lifecycles at Cognizant and Paragon.</p>
                 </div>
-                <span class="action-link">Deep Dive →</span>
+                <span class="action-trigger">Deep Dive View →</span>
             </div>
 
         </div>
     </section>
 
-    <!-- Technical Arsenal Layer -->
+    <!-- Technical Arsenal Space -->
     <section id="skills">
         <h2 class="section-title">Technical Arsenal</h2>
         <div class="skills-container">
-            <div class="skill-tag"><p>AI &amp; ML</p></div>
-            <div class="skill-tag"><p>Computer Vision</p></div>
-            <div class="skill-tag"><p>Data Pipelines</p></div>
-            <div class="skill-tag"><p>Python (Expert)</p></div>
-            <div class="skill-tag"><p>Advanced SQL</p></div>
-            <div class="skill-tag"><p>AWS Cloud</p></div>
-            <div class="skill-tag"><p>Postgres</p></div>
-            <div class="skill-tag"><p>R-INLA</p></div>
+            <div class="skill-tag"><p>AI &amp; Machine Learning</p></div>
+            <div class="skill-tag"><p>Computer Vision Models</p></div>
+            <div class="skill-tag"><p>Data Pipeline Engineering</p></div>
+            <div class="skill-tag"><p>Python Development (Expert)</p></div>
+            <div class="skill-tag"><p>Advanced Relational SQL</p></div>
+            <div class="skill-tag"><p>AWS Cloud Architecture</p></div>
+            <div class="skill-tag"><p>PostgreSQL Datastores</p></div>
+            <div class="skill-tag"><p>R-INLA Modeling</p></div>
         </div>
     </section>
 
-    <!-- Global Footer -->
+    <!-- Dynamic Overlay Popup Modal Component Layer -->
+    <div id="projectModal" class="modal" onclick="closeProjectModalOutside(event)">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeProjectModal()">&times;</span>
+            <div id="modalStatus" class="modal-status"></div>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription" class="modal-description"></p>
+            
+            <div class="modal-meta-grid">
+                <div class="modal-meta-item">
+                    <h4>Core Stack Architecture</h4>
+                    <p id="modalTech"></p>
+                </div>
+                <div class="modal-meta-item">
+                    <h4>Primary Business Outcome</h4>
+                    <p id="modalImpact"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Application Footer Global -->
     <footer>
         <p>© 2026 Niranjan Reddy Bojja | Systems Architect &amp; Data Scientist</p>
     </footer>
 
+    <!-- Interactive Pure Vanilla Logic Controller -->
+    <script>
+        const modal = document.getElementById('projectModal');
+        const titleEl = document.getElementById('modalTitle');
+        const statusEl = document.getElementById('modalStatus');
+        const descEl = document.getElementById('modalDescription');
+        const techEl = document.getElementById('modalTech');
+        const impactEl = document.getElementById('modalImpact');
+
+        function openProjectModal(title, status, description, technology, impact) {
+            titleEl.textContent = title;
+            statusEl.textContent = status;
+            descEl.textContent = description;
+            techEl.textContent = technology;
+            impactEl.textContent = impact;
+            
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Freeze base scroll layer
+        }
+
+        function closeProjectModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = ''; // Unfreeze base scroll layer
+        }
+
+        function closeProjectModalOutside(event) {
+            if (event.target === modal) {
+                closeProjectModal();
+            }
+        }
+
+        // Global Esc Key Bind to facilitate simple dismissal actions
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && modal.classList.contains('active')) {
+                closeProjectModal();
+            }
+        });
+    </script>
 </body>
 </html>
